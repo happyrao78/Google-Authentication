@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+    <script type="module" src="app.js" defer></script>
+    <script type="module" src="./test.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #signInBtn {
+            background-color: #4285F4;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+        #signInBtn i {
+            margin-right: 10px;
+        }
+        #signOutBtn {
+            background-color: #DB4437;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google Sign In</h1>
+    <section id="whenSignedOut">
+        <button id="signInBtn"><i class="fab fa-google"></i> Sign in with Google</button>
+    </section>
+
+    <section id="whenSignedIn" hidden="true">
+        <div id="userDetails"></div>
+        <button id="signOutBtn">Sign Out</button>
+    </section>
+    <!-- <section>
+        <ul id="thingsList"></ul>
+        <button id="createThing">Add your name to the database</button>
+    </section> -->
+</body>
+</html>
